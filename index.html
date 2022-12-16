@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/datepicker.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 달력 -->
+        <div class="container-">
+            <div class="bluecolor-"></div>
+            <div class="calendar-">
+                <header>
+                    <a href="#" class="naviicon-"><img src="images/right.png"></a>
+                    <h1 class="titlerecord-">웨더 기록</h1>
+                </header>
+    
+                <div id="datepicker-"></div>
+                <div id="datepicker2-">
+                    <div class="calendar2-">
+                        <a class="date4- date6-" href="#">
+                            <div class="weekend-">일</div>
+                            <div class="numberwhite-">31</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekdays-">월</div>
+                            <div class="number-">1</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekdays-">화</div>
+                            <div class="number-">2</div>
+                        </a>
+                        <a class="date4- colorweatherin-" href="#">
+                            <div class="weekdays-">수</div>
+                            <div class="number-">3</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekdays-">목</div>
+                            <div class="number-">4</div>
+                        </a>
+                        <a class="date5- todayfriday-" href="#">
+                            <div class="todayweekdays-">금</div>
+                            <div class="todaynumber-">5</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekend-">토</div>
+                            <div class="numberweekend-">6</div>
+                        </a>
+                        <div class="colorweather1-"></div>
+                        <div class="colorweather2-"></div>
+                    </div>
+                </div>
+                <a href="#" class="bar-"></a>
+            </div>
+    
+            <h2 class="today-">이 날의 웨더를 기록해주세요</h2>
+            <div class="center-">         
+            <a class="button-" href="#">기록하기</a>
+            </div>
+    
+            <div id="today-record-">
+                <div class="record-header-">
+                <div class="info-">
+                    <div id="time3-">12월 5일 금요일</div>
+                    <div id="time4-"></div>
+                    <div id="city3-">서울시</div>
+                </div>
+                    <a href="#" class="more-icon-"><img src="images/Group 697.png "></a>
+                </div>
+                <div class="myadvice-">비가 와서 찝찝했음</div>
+                <div class="temparature3-">
+                    <div class="tempminmax-">
+                        <div id="temp_max3-">21°</div>
+                        <p class="slash-">/</p>
+                        <div id="temp_min3-">18°</div>
+                    </div>
+                    <div id="todayweather-">
+                        <div class="cold-" href="#">추웠어요</div>
+                    </div>
+                </div>
+    
+                <div class="line3-"></div>
+    
+                <div class="my-diary-">
+                    <div id="my-icon-"><img src="images/feeling4.png"></div>
+                    <div id="my-weather-">비</div>
+                </div>
+    
+                <p id="my-diary-">비만 오면 항상 울적해지더라..<br>내일은 맑은 하늘이었으면 좋겠다</p>
+            </div>
+    
+            <div id="today-record2-">
+                <div class="record-header-">
+                <div class="info-">
+                    <div id="time3-">12월 3일 수요일</div>
+                    <div id="time4-"></div>
+                    <div id="city3-">서울시</div>
+                </div>
+                    <a href="#" class="more-icon-"><img src="images/Group 697.png "></a>
+                </div>
+    
+                <div class="myadvice-">비가 와서 찝찝했음</div>
+    
+                <div class="temparature3-">
+                    <div class="tempminmax-">
+                        <div id="temp_max3-">21°</div>
+                        <p class="slash-">/</p>
+                        <div id="temp_min3-">18°</div>
+                    </div>
+                    <div id="todayweather-">
+                        <div class="cold-" href="#">추웠어요</div>
+                    </div>
+                </div>
+    
+                <div class="line3-"></div>
+    
+                <div class="my-diary-">
+                    <div id="my-icon-"><img src="images/feeling4.png"></div>
+                    <div id="my-weather-">비</div>
+                </div>
+    
+                <p id="my-diary-">비만 오면 항상 울적해지더라..<br>내일은 맑은 하늘이었으면 좋겠다</p>
+            </div>
+    
+            <!-- Weather record -->
+        <div class="container2-">
+            <a href="#"><img class="x-" src="images/x.png"></a>
+            <div class="content-">
+                <h1 class="title1-">12월 5일의 <span class="color-">웨더</span>를<br> 기록해볼까요?</h1>
+    
+                <div class="conA-">
+                    <p class="title-"><span class="color-">날씨</span>에 대한 느낌을 선택해주세요.</p>
+                    <div class="feeling-">
+                    <a class="plus-" href="#"><img src="images/+.png" alt="#"></a>
+                    <a class="so-hot-" href="#">너무 더웠어요</a>
+                    <a class="hot-" href="#">더웠어요</a>
+                    <a class="suitable-" href="#">적당했어요</a>
+                    <a class="cold-" href="#">추웠어요</a>
+                    <a class="so-cold-" href="#">너무 추웠어요</a>
+                    </div>
+                </div>
+    
+                <div class="conB-">
+                    <p class="title-"><span class="color-">날씨 조언</span>을 적어주세요</p>
+                    <textarea class="weather-advice-" type="text" placeholder="미래의 나에게 들려주고 싶은 날씨 조언을 적어주세요. (예 : 나름 쌀쌀하니까 조금 두껍게입어도 괜찮아.)"></textarea>
+                </div>
+    
+                <div class="conC-">
+                    <p class="title-"><span class="color-">태문님의 감정</span>을 날씨로 표현해보세요</p>
+                    <div class="feeling-img">
+                        <a class="f-img f-img1" href="#"><img src="images/feeling1.png"><div class="white white1"></div></a>
+                        <a class="f-img f-img2" href="#"><img src="images/feeling2.png"><div class="white white2"></div></a>
+                        <a class="f-img f-img3" href="#"><img src="images/feeling3.png"><div class="white white3"></div></a>
+                        <a class="f-img f-img4" href="#"><img src="images/feeling4.png"><div class="white white4"></div></a>
+                        <a class="f-img f-img5" href="#"><img src="images/feeling5.png"><div class="white white5"></div></a>
+                        <a class="f-img f-img6" href="#"><img src="images/feeling6.png"><div class="white white6"></div></a>
+                        <a class="f-img f-img7" href="#"><img src="images/feeling7.png"><div class="white white7"></div></a>
+                        <a class="f-img f-img8" href="#"><img src="images/feeling8.png"><div class="white white8"></div></a>
+                    </div>
+                </div>
+    
+                <div class="conD-">
+                    <div class="small-title-">
+                        <p class="title-"><span class="color-">소소한 일기</span></p>
+                        <div class="options-">선택</div>
+                    </div>
+                    <textarea class="diary-" type="text" placeholder="오늘의 기분을 글로 남겨보세요."></textarea>
+                </div>
+                <a class="button2-" href="#"><p class="complete-">완료</p></a>
+            </div>
+    
+        </div>
+        <!-- 달력 -->
+        </div>
+        <!-- 달력 -->
+        <div class="main_page">
+            <!-- <div class="phoneheader"><img src="images/Frame 19.png"></div> -->
+            <header class="header">
+                
+                <p class="time3">12. 5(금)  3:07 AM</p>
+                <ul class="navi">
+                    <li><a href="#"><img src="images/plus.png"></a></li>
+                    <li><a href="#" class="scrolltoggle"><img src="https://i.postimg.cc/cCWTtBPg/Calender.png"/></a></li>
+                </ul>
+            </header>
+
+            <main>
+                <h1 class="ment">가까운 곳이라도<br>산책해볼까요?</h1>
+                <a class="flex" href="#"><img id="icon-weather"></a>
+                
+
+                <img class="bubble" src="images/Union.png">
+                <div class="question">
+                    <h3 class="user_question">태문님의 웨더란?</h3>
+                    <div class="user_bar"></div>
+                    <p class="expression">‘태문님의 웨더’는 내가 기록한 웨더 중 오늘과 가장 비슷한 날씨 기록입니다.<br>더 많은 웨더를 기록할수록 더욱 맞춤화된 정보를 받을 수 있습니다.</p>
+                </div>
+                <div id="main_city"></div>
+                <div class="temperature">
+                    <div class="main_temp">
+                    <div id="temp"></div>
+                    <div class="celsius">°</div>
+                    </div>
+                    <div class="user_weather">
+                        <div class="flex2">
+                            <p class="user">태문님의 웨더</p>
+                            <a class="icon" href="#"><img src="images/Question.png"/></a>
+                        </div>
+                        <p class="weather_log">너무 추웠어요</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="see_more">
+            <a class="more" href="#">
+                <p class="weather_more">날씨 더보기</p>
+                <img src="images/u_angle-right-b.png">
+            </a>
+            
+            <!-- weather details -->
+            <div class="container2">
+                <div class="hour">
+                    <h3 class="time_weather">시간대별 날씨</h3>
+                    <div class="flex3">
+                    <div id="today"></div>
+                    <div id="forecast">
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="week">
+                    <h3 class="week_weather">주간 날씨</h3>
+                    <div id="forecast2">
+                    </div>
+                </div>
+        
+                <div class="detailed">
+                    <h3 class="detailed_weather">상세 날씨</h3>
+                    <div class="detailed_weather_form">
+                        <div class="detailed_weather_form1">
+                            <p class="weather_title">체감온도</p>
+                            <div id="feels_like"></div>
+                        </div>
+                        <div class="detailed_weather_form1">
+                            <p class="weather_title">풍속</p>
+                            <div id="wind_speed"></div>
+                        </div>
+                        <div class="detailed_weather_form1">
+                            <p class="weather_title">습도</p>
+                            <div id="huminity"></div>
+                        </div>
+                        <div class="detailed_weather_form1">
+                            <p class="weather_title">강수확률</p>
+                            <div id="rain"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="sunriseset">
+                    <h3 class="sunriseset_title">일출일몰</h3>
+                        <div class="circle">
+                            <div class="sunmove"></div>
+                        </div>
+                    <div class="sun">
+                        <div id="sunrise"></div>
+                        <div id="sunset"></div>
+                    </div>
+                </div>
+        
+                <div class="sourcediv">
+                    <a class="source" href="https://openweathermap.org/city/1846918">날씨정보 출처 및 발표 시간
+                        <img src="https://i.postimg.cc/MGKSVy2L/rightarrow.png" class="arrow"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Weather record -->
+
+        <!-- 달력 -->
+        <div class="container-">
+            <div class="bluecolor-"></div>
+            <div class="calendar-">
+                <header>
+                    <a href="#" class="naviicon-"><img src="images/right.png"></a>
+                    <h1 class="titlerecord-">웨더 기록</h1>
+                </header>
+    
+                <div id="datepicker-"></div>
+                <div id="datepicker2-">
+                    <div class="calendar2-">
+                        <a class="date4- date6-" href="#">
+                            <div class="weekend-">일</div>
+                            <div class="numberwhite-">31</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekdays-">월</div>
+                            <div class="number-">1</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekdays-">화</div>
+                            <div class="number-">2</div>
+                        </a>
+                        <a class="date4- colorweatherin-" href="#">
+                            <div class="weekdays-">수</div>
+                            <div class="number-">3</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekdays-">목</div>
+                            <div class="number-">4</div>
+                        </a>
+                        <a class="date5- todayfriday-" href="#">
+                            <div class="todayweekdays-">금</div>
+                            <div class="todaynumber-">5</div>
+                        </a>
+                        <a class="date4-" href="#">
+                            <div class="weekend-">토</div>
+                            <div class="numberweekend-">6</div>
+                        </a>
+                        <div class="colorweather1-"></div>
+                        <div class="colorweather2-"></div>
+                    </div>
+                </div>
+                <a href="#" class="bar-"></a>
+            </div>
+    
+            <h2 class="today-">이 날의 웨더를 기록해주세요</h2>
+            <div class="center-">         
+            <a class="button-" href="#">기록하기</a>
+            </div>
+    
+            <div id="today-record-">
+                <div class="record-header-">
+                <div class="info-">
+                    <div id="time3-">11월 03일 수요일</div>
+                    <div id="time4-"></div>
+                    <div id="city3-">안산시</div>
+                </div>
+                    <a href="#" class="more-icon-"><img src="images/Group 697.png "></a>
+                </div>
+                <div class="myadvice-">비가 와서 찝찝했음</div>
+                <div class="temparature3-">
+                    <div class="tempminmax-">
+                        <div id="temp_max3-">21°</div>
+                        <p class="slash-">/</p>
+                        <div id="temp_min3-">18°</div>
+                    </div>
+                    <div id="todayweather-">
+                        <div class="cold-" href="#">추웠어요</div>
+                    </div>
+                </div>
+    
+                <div class="line3-"></div>
+    
+                <div class="my-diary-">
+                    <div id="my-icon-"><img src="images/feeling4.png"></div>
+                    <div id="my-weather-">비</div>
+                </div>
+    
+                <p id="my-diary-">비만 오면 항상 울적해지더라..<br>내일은 맑은 하늘이었으면 좋겠다</p>
+            </div>
+    
+            <div id="today-record2-">
+                <div class="record-header-">
+                <div class="info-">
+                    <div id="time3-">11월 03일 수요일</div>
+                    <div id="time4-"></div>
+                    <div id="city3-">안산시</div>
+                </div>
+                    <a href="#" class="more-icon-"><img src="images/Group 697.png "></a>
+                </div>
+    
+                <div class="myadvice-">비가 와서 찝찝했음</div>
+    
+                <div class="temparature3-">
+                    <div class="tempminmax-">
+                        <div id="temp_max3-">21°</div>
+                        <p class="slash-">/</p>
+                        <div id="temp_min3-">18°</div>
+                    </div>
+                    <div id="todayweather-">
+                        <div class="cold-" href="#">추웠어요</div>
+                    </div>
+                </div>
+    
+                <div class="line3-"></div>
+    
+                <div class="my-diary-">
+                    <div id="my-icon-"><img src="images/feeling4.png"></div>
+                    <div id="my-weather-">비</div>
+                </div>
+    
+                <p id="my-diary-">비만 오면 항상 울적해지더라..<br>내일은 맑은 하늘이었으면 좋겠다</p>
+            </div>
+    
+            <!-- Weather record -->
+        <div class="container2-">
+            <a href="#"><img class="x-" src="images/x.png"></a>
+            <div class="content-">
+                <h1 class="title1-">10월 15일의 <span class="color-">웨더</span>를<br> 기록해볼까요?</h1>
+    
+                <div class="conA-">
+                    <p class="title-"><span class="color-">날씨</span>에 대한 느낌을 선택해주세요.</p>
+                    <div class="feeling-">
+                    <a class="plus-" href="#"><img src="images/+.png" alt="#"></a>
+                    <a class="so-hot-" href="#">너무 더웠어요</a>
+                    <a class="hot-" href="#">더웠어요</a>
+                    <a class="suitable-" href="#">적당했어요</a>
+                    <a class="cold-" href="#">추웠어요</a>
+                    <a class="so-cold-" href="#">너무 추웠어요</a>
+                    </div>
+                </div>
+    
+                <div class="conB-">
+                    <p class="title-"><span class="color-">날씨 조언</span>을 적어주세요</p>
+                    <textarea class="weather-advice-" type="text" placeholder="미래의 나에게 들려주고 싶은 날씨 조언을 적어주세요. (예 : 나름 쌀쌀하니까 조금 두껍게입어도 괜찮아.)"></textarea>
+                </div>
+    
+                <div class="conC-">
+                    <p class="title-"><span class="color-">태문님의 감정</span>을 날씨로 표현해보세요</p>
+                    <div class="feeling-img">
+                        <a class="f-img f-img1" href="#"><img src="images/feeling1.png"><div class="white white1"></div></a>
+                        <a class="f-img f-img2" href="#"><img src="images/feeling2.png"><div class="white white2"></div></a>
+                        <a class="f-img f-img3" href="#"><img src="images/feeling3.png"><div class="white white3"></div></a>
+                        <a class="f-img f-img4" href="#"><img src="images/feeling4.png"><div class="white white4"></div></a>
+                        <a class="f-img f-img5" href="#"><img src="images/feeling5.png"><div class="white white5"></div></a>
+                        <a class="f-img f-img6" href="#"><img src="images/feeling6.png"><div class="white white6"></div></a>
+                        <a class="f-img f-img7" href="#"><img src="images/feeling7.png"><div class="white white7"></div></a>
+                        <a class="f-img f-img8" href="#"><img src="images/feeling8.png"><div class="white white8"></div></a>
+                    </div>
+                </div>
+    
+                <div class="conD-">
+                    <div class="small-title-">
+                        <p class="title-"><span class="color-">소소한 일기</span></p>
+                        <div class="options-">선택</div>
+                    </div>
+                    <textarea class="diary-" type="text" placeholder="오늘의 기분을 글로 남겨보세요."></textarea>
+                </div>
+                <a class="button2-" href="#"><p class="complete-">완료</p></a>
+            </div>
+    
+        </div>
+        <!-- 달력 -->
+        </div>
+        <!-- 달력 -->
+
+	</div>
+
+
+
+
+
+
+    <script>
+        //weather app jquery
+        $(function(){
+            $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1846918&appid=3e48f16a0e07b0e184d1835d070d4906&units=metric',
+            function(data){
+                console.log(data);
+                //시간
+                let time = data.dt;
+                let today = moment(time*1000);
+                let date = today.format('MM.DD(ddd) HH:mm A');
+
+                //도시
+                let city = data.name;
+
+                //기온
+                let temp = Math.round(data.main.temp);
+                let temp_max = Math.round(data.main.temp_max);
+                let temp_min = Math.round(data.main.temp_min);
+                
+                //날씨
+                let weather = data.weather[0].main;
+
+                //아이콘
+                let iconCode = data.weather[0].icon;
+                $('#icon-weather').attr('src', 'images/' + iconCode + '.png');
+
+                //날씨가 바뀔 때 멘트 바꾸기
+                if(iconCode == '03d' || iconCode == '03n'){
+                    $('.ment').html('<h1 class="click_ment">조금 흐리지만<br>한번 더 웃어봐요</h1>');
+                }
+
+                //날씨 클릭했을 때 멘트 바뀌기
+                if(iconCode == '01d' || iconCode == '01n'){
+                    $('#icon-weather').click(function(){
+                        let randomNumber = Math.floor(Math.random() * 5);
+                        //number가 0에서 5로
+                        // Math.random은 랜덤하게 나오게 하는 것
+                        // Math.floor은 소수점 버리기
+                            if(randomNumber == 0){
+                                $('.ment').html('<h1 class="click_ment">날씨가 포근하니<br>기분까지 좋아져요</h1>');
+                            }
+                            if(randomNumber == 1){
+                                $('.ment').html('<h1 class="click_ment">날씨가 따뜻하게<br>풀렸어요</h1>');
+                            }
+                                                                   
+                            if(randomNumber == 2){
+                                $('.ment').html('<h1 class="click_ment">드라이브하기<br>좋은 날이에요</h1>');
+                            }
+                            if(randomNumber == 3){
+                                $('.ment').html('<h1 class="click_ment">바쁜 와중에<br>잠시 하늘을 봐요</h1>');
+                            }
+                            if(randomNumber == 4){
+                                $('.ment').html('<h1 class="click_ment">싹이 푸릇푸릇<br>움트는 따스한 날</h1>');
+                            }  
+                                        
+                    });
+                }
+
+                if(iconCode == '02d' || iconCode == '02n'){
+                    $('#icon-weather').click(function(){
+                        let randomNumber = Math.floor(Math.random() * 5);
+                        //number가 0에서 5로
+                        // Math.random은 랜덤하게 나오게 하는 것
+                        // Math.floor은 소수점 버리기
+                            if(randomNumber == 0){
+                                $('.ment').html('<h1 class="click_ment">날씨가 포근하니<br>기분까지 좋아져요</h1>');
+                            }
+                            if(randomNumber == 1){
+                                $('.ment').html('<h1 class="click_ment">날씨가 따뜻하게<br>풀렸어요</h1>');
+                            }
+                                                                   
+                            if(randomNumber == 2){
+                                $('.ment').html('<h1 class="click_ment">드라이브하기<br>좋은 날이에요</h1>');
+                            }
+                            if(randomNumber == 3){
+                                $('.ment').html('<h1 class="click_ment">바쁜 와중에<br>잠시 하늘을 봐요</h1>');
+                            }
+                            if(randomNumber == 4){
+                                $('.ment').html('<h1 class="click_ment">하늘과 구름이<br>조화로워요</h1>');
+                            }    
+                                        
+                    });
+                }
+
+                if(iconCode == '03d' || iconCode == '03n'){
+                    $('#icon-weather').click(function(){
+                        let randomNumber = Math.floor(Math.random() * 7);
+                        //number가 0에서 5로
+                        // Math.random은 랜덤하게 나오게 하는 것
+                        // Math.floor은 소수점 버리기
+                            if(randomNumber == 0){
+                                $('.ment').html('<h1 class="click_ment"> 구름이 어른어른<br>지나가요</h1>');
+                            }
+                            if(randomNumber == 1){
+                                $('.ment').html('<h1 class="click_ment">날씨는 흐려도<br>기분은 맑음!</h1>');
+                            }
+                            if(randomNumber == 2){
+                                $('.ment').html('<h1 class="click_ment">조금 흐리지만<br>한번 더 웃어봐요</h1>');
+                            }
+                            if(randomNumber == 3){
+                                $('.ment').html('<h1 class="click_ment">구름은 생각보다<br>빠르게 지나가요</h1>');
+                            }   
+                            if(randomNumber == 4){
+                                $('.ment').html('<h1 class="click_ment">옅은 구름이<br>하늘을 장식해요</h1>');
+                            }  
+                            if(randomNumber == 5){
+                                $('.ment').html('<h1 class="click_ment">흘러가는 구름처럼<br>자유로운 하루 :)</h1>');
+                            }  
+                            if(randomNumber == 6){
+                                $('.ment').html('<h1 class="click_ment">하늘에 솜사탕이<br>떠있네요</h1>');
+                            } 
+                            if(randomNumber == 7){
+                                $('.ment').html('<h1 class="click_ment">맑으면 맑은대로<br>흐리면 흐린대로</h1>');
+                            } 
+                            if(randomNumber == 8){
+                                $('.ment').html('<h1 class="click_ment">구름 수를<br>세어보아요 :)</h1>');
+                            }   
+                    });
+                }
+
+                console.log(temp_min);
+                $('#main_city').text('서울');
+                $('#weather').text(weather);
+                $('#temp').text(temp);
+                $('#temp_minmax').text(temp_max + ' / ' + temp_min);
+                $('.time').text(date);
+            });
+
+
+            //태문님의 웨더
+            $('.icon').click(function(){
+                $('.bubble, .question').toggle();
+            });
+
+            //날씨 더보기 누르기
+            $('.more').click(function(){
+				$('.see_more').toggleClass('more-position');
+                $('.container2').show();
+			});
+
+            //달력 나오게 만들기
+            $('.scrolltoggle').click(function(){
+                $('.container-').animate({width:"toggle"},350);
+                $('.container').css('display', 'block');
+                $('.see_more').hide();
+            });
+
+            //네비 아이콘 누르면 다시 메인으로 돌아가기
+            $('.naviicon-').click(function(){
+                $('.container-').animate({width:"toggle"},350);
+                $('.see_more').show();
+            });
+        });
+
+
+
+
+
+
+
+
+        //weather details jquery
+        $(function(){
+            $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1846918&appid=3e48f16a0e07b0e184d1835d070d4906&units=metric&lang=kr',
+            function(data){
+                console.log(data);
+
+                //도시
+                let city = data.name;
+
+                //기온
+                let temp = Math.round(data.main.temp);
+                let temp_max = Math.round(data.main.temp_max);
+                let temp_min = Math.round(data.main.temp_min);
+
+                //체감온도
+                let feels_like = Math.round(data.main.feels_like);
+
+                //바람
+                let wind_deg = data.wind.deg;
+                let wind_speed = data.wind.speed;
+
+                //습도
+                let humidity = data.main.humidity;
+
+                //강수량
+                let rain = data.rain;
+                
+                //날씨
+                let weather = data.weather[0].main;
+
+                //일출
+                let sunrise = data.sys.sunrise;
+                let today = moment(sunrise*1000);
+                let time = today.format('HH:mm');
+
+
+                //일몰
+                let sunset = data.sys.sunset;
+                let today_sunset = moment(sunset*1000);
+                let time2 = today_sunset.format('HH:mm');
+
+                //아이콘
+                let iconCode = data.weather[0].icon;
+                $('#image').attr('src', 'images2/' + iconCode + '.png');
+
+
+                $('#weather').text(weather);
+                $('#temp').text(temp);
+                $('#temp_minmax').text(temp_max + ' / ' + temp_min);
+                $('#feels_like').text(feels_like + ' ° ');
+                $('#wind_deg').text(wind_deg);
+                $('#wind_speed').text(wind_speed + 'm/s');
+                $('#huminity').text(humidity + '%');
+                $('#rain').text(rain + 'mm');
+                $('#sunrise').text(time + ' AM');
+                $('#sunset').text(time2 + ' PM');
+                $('#sunrise').css('margin-right', '181px');
+
+                let dom = $('<div class="forecast"></div');
+                dom.append('<p class="rightnow">지금</p>');
+
+                let iconDom = $('<img id="image"/>');
+                dom.append(iconDom);
+                iconDom.attr('src', 'images2/' + iconCode + '.png');
+                iconDom.before('<div class="before-"></div>');
+                iconDom.after('<div class="after-"></div>');
+                
+
+                dom.append('<div class="temp">' + temp + '°' +'</div>');
+                        
+                $('#today').append(dom);
+
+
+                // background color 바꾸기
+                if(iconCode == '01d' || iconCode == '01n'){
+                    $('.container').css('background-color','#F9B089');
+                }
+                if(iconCode == '02d' || iconCode == '02n'){
+                    $('.container').css('background-color','#FDB6C3');
+                }
+                if(iconCode == '03d' || iconCode =='03n' || iconCode == '04d' || iconCode == '04n' || iconCode == '09d' || iconCode == '09n' || iconCode == '10d' || iconCode == '10n' || iconCode == '13d' || iconCode == '13n'){
+                    $('.container').css('background-color','#A2D9E2');
+                }
+                if(iconCode == '11d' || iconCode == '11n' || iconCode == '50d' || iconCode == '50n'){
+                    $('.container').css('background-color','#93E2C8');
+                }
+            });
+
+
+            $.getJSON('https://api.openweathermap.org/data/2.5/forecast?id=1846918&appid=3e48f16a0e07b0e184d1835d070d4906&units=metric', function(data){
+                console.log(data);
+
+                //반복문(i = 0부터 9까지 반복, 0부터 시작하니까 10번 반복)
+                //12시간 뒤부터로 하고 싶으면 i=4(3시간에 한 번)로 변경
+                for(let i = 0; i<10; i++){
+                    let dt = data.list[i].dt;
+                    let temp = Math.round(data.list[i].main.temp);
+                    let temp_max = Math.round(data.list[i].main.temp_max);
+                    let temp_min = Math.round(data.list[i].main.temp_min);
+                    let iconCode = data.list[i].weather[0].icon;
+                    $('#icon').attr('src', 'images2/' + iconCode + '.png');
+
+                    //내 컴퓨터의 시간을 기준으로 함
+                    let today = moment(dt*1000);
+                    let date = today.format('HH시');
+
+                    let dom = $('<div class="forecast"></div');
+                    dom.append('<div class="date">' + date + '</div>');
+
+                    let iconDom = $('<img id="icon"/>');
+                    dom.append(iconDom);
+                    iconDom.attr('src', 'images2/' + iconCode + '.png');
+                    iconDom.before('<div class="before-"></div>');
+                    iconDom.after('<div class="after-"></div>');
+
+
+                    dom.append('<div class="temp">' + temp + '°' +'</div>');
+
+                    $('#forecast').append(dom);
+                }
+            });
+
+            $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat=37.3236&lon=126.8219&exclude=minutely&appid=3e48f16a0e07b0e184d1835d070d4906&units=metric', function(data){
+                console.log(data);
+
+                for(let i = 0; i<8; i++){
+                    let dt = data.daily[i].dt;
+                    let rain = data.daily[i].pop;
+                    let temp_max = Math.round(data.daily[i].temp.max);
+                    let temp_min = Math.round(data.daily[i].temp.min);
+                    let weather = data.daily[i].weather[0].main;
+                    let iconCode = data.daily[i].weather[0].icon;
+
+
+
+                    //내 컴퓨터의 시간을 기준으로 함
+                    let today = moment(dt*1000);
+                    let date = today.format('ddd');
+
+                    //요일 바꾸기
+                    if(date == 'Sat') date = '토';
+                    if(date == 'Sun') date = '일';
+                    if(date == 'Mon') date = '월';
+                    if(date == 'Tue') date = '화';
+                    if(date == 'Wed') date = '수';
+                    if(date == 'Thu') date = '목';
+                    if(date == 'Fri') date = '금';
+                    
+
+                    let dom = $('<div class="forecast"></div');
+                    dom.append('<div class="date2">' + date + '</div>');
+
+                    let iconDom = $('<img id="icon2"/>');
+                    dom.append(iconDom);
+                    iconDom.attr('src', 'images2/' + iconCode + '.png');
+                    iconDom.before('<div class="before-"></div>');
+                    iconDom.after('<div class="after-"></div>');
+
+                    dom.append('<div class="temp_max">' + temp_max + '°' +'</div>');
+                    dom.append('<div class="bar"></div>');
+                    dom.append('<div class="temp_min">' + temp_min + '°' +'</div>');
+
+                    $('#forecast2').append(dom);
+                    $('#rain').text(rain + '%');
+                    
+                }
+
+                //현재 시간만 진한 글씨로
+                $('.date2').each(function(idx, obj){
+                    if(idx == 0){
+                        $(this).css('color', '#353C49')
+                        $(this).text('오늘');
+                    }
+                });
+                
+
+            });
+        
+        });
+
+
+        //달력
+        $(function(){
+			$('#datepicker-').datepicker({
+				showMonthAfterYear: true,
+				yearSuffix: ".",
+				inline: true,
+				//nextText: '&rarr;',
+				//prevText: '&larr;',
+				showOtherMonths: true,
+				//dateFormat: 'dd MM yy',
+				monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+				monthNames: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				//showOn: "button",
+				//buttonImage: "img/calendar-blue.png",
+				//buttonImageOnly: true,				
+			});
+
+
+
+			//달력 바 눌렀을 때
+			$('.bar-').click(function(){
+				$('.calendar-').toggleClass('height');
+				$('.bar-').toggleClass('position');
+				$('.ui-datepicker-calendar').toggle();
+				$('#datepicker2-').toggle();
+				$('#today-record-').hide();
+				$('#today-record2-').hide();
+				$('.today-').show();
+				$('.button-').show();
+                $('.bluecolor-').toggle();
+			});
+
+			//달력 바 눌렀을 때 바 연해졌다 진해지기
+			$('.bar-').click(function(){
+				$('.bar-').animate({'opacity': 0},250)
+						 .animate({'opacity': 100},250);
+			});
+
+			//기록하기 눌렀을 때
+			$('.button-').click(function(){
+				$('.container2-').toggle();
+			});
+
+			//x 눌렀을 때
+			$('.x-').click(function(){
+				$('.container2-').css('display', 'none');
+			});
+
+			//날씨에 대한 느낌 눌렀을 때
+			$('.so-hot-').click(function(){
+            	$(this).toggleClass("active1");
+        	});
+			$('.hot-').click(function(){
+            	$(this).toggleClass("active2");
+        	});
+			$('.suitable-').click(function(){
+            	$(this).toggleClass("active3");
+        	});
+			$('.cold-').click(function(){
+            	$(this).toggleClass("active4");
+        	});
+			$('.so-cold-').click(function(){
+            	$(this).toggleClass("active5");
+        	});
+
+			//감정 날씨로 표현하기
+			$('.f-img1').click(function(){
+				$('.white1').toggle();
+			});
+			$('.f-img2').click(function(){
+				$('.white2').toggle();
+			});
+			$('.f-img3').click(function(){
+				$('.white3').toggle();
+			});
+			$('.f-img4').click(function(){
+				$('.white4').toggle();
+			});
+			$('.f-img5').click(function(){
+				$('.white5').toggle();
+			});
+			$('.f-img6').click(function(){
+				$('.white6').toggle();
+			});
+			$('.f-img7').click(function(){
+				$('.white7').toggle();
+			});
+			$('.f-img8').click(function(){
+				$('.white8').toggle();
+			});
+
+
+			$.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1846918&appid=3e48f16a0e07b0e184d1835d070d4906&units=metric',
+            function(data){
+                console.log(data);
+                //시간
+                let time = data.dt;
+                let today = moment(time*1000);
+                let date = today.format('MM월 DD일');
+
+				let time2 = data.dt;
+                let today2 = moment(time2*1000);
+                let date2 = today2.format('ddd');
+
+				//요일 바꾸기
+				if(date2 == 'Sat') date2 = '토요일';
+                if(date2 == 'Sun') date2 = '일요일';
+                if(date2 == 'Mon') date2 = '월요일';
+                if(date2 == 'Tue') date2 = '화요일';
+                if(date2 == 'Wed') date2 = '수요일';
+                if(date2 == 'Thu') date2 = '목요일';
+                if(date2 == 'Fri') date2 = '금요일';
+
+                //도시
+                let city = data.name;
+
+                //기온
+                let temp = Math.round(data.main.temp);
+                let temp_max = Math.round(data.main.temp_max);
+                let temp_min = Math.round(data.main.temp_min);
+                
+                //날씨
+                let weather = data.weather[0].main;
+
+                //아이콘
+                let iconCode = data.weather[0].icon;
+                $('#icon-').attr('src', 'images/' + iconCode + '.png');
+
+
+                $('#city3-').text('안산시');
+                $('#weather-').text(weather);
+                $('#temp-').text(temp);
+				$('#temp_max3-').text(temp_max + '°');
+				$('#temp_min3-').text(temp_min + '°');
+                $('#temp_minmax-').text(temp_max + ' / ' + temp_min);
+                $('#time3-').text(date);
+				$('#time4-').text(date2);
+            });
+
+
+			//조언 적으면 기록에 넘어가기
+			$('.button2-').click(function(){
+				let advice = $('.weather-advice-').val();
+				$('.myadvice-').text(advice);
+			});
+
+			//버튼 누르면 기록에 넘어가기
+			$('.so-hot-').click(function(){
+				$('#todayweather-').html('<div class="so-hot-" href="#">너무 더웠어요</div>');
+			});
+			$('.hot-').click(function(){
+				$('#todayweather-').html('<div class="hot-" href="#">더웠어요</div>');
+			});
+			$('.suitable-').click(function(){
+				$('#todayweather-').html('<div class="suitable-" href="#">적당했어요</div>');
+			});
+			$('.cold-').click(function(){
+				$('#todayweather-').html('<div class="cold-" href="#">추웠어요</div>');
+			});
+			$('.so-cold-').click(function(){
+				$('#todayweather-').html('<div class="so-cold-" href="#">너무 추웠어요</div>');
+			});
+
+			//날씨 아이콘 누르면 기록에 넘어가기
+			$('.f-img1').click(function(){
+				$('#my-icon-').html('<img src="images/feeling1.png">');
+				$('#my-weather-').text('맑음');
+			});
+			$('.f-img2').click(function(){
+				$('#my-icon-').html('<img src="images/feeling2.png">');
+				$('#my-weather-').text('살짝 흐림');
+			});
+			$('.f-img3').click(function(){
+				$('#my-icon-').html('<img src="images/feeling3.png">');
+				$('#my-weather-').text('흐림');
+			});
+			$('.f-img4').click(function(){
+				$('#my-icon-').html('<img src="images/feeling4.png">');
+				$('#my-weather-').text('비');
+			});
+			$('.f-img5').click(function(){
+				$('#my-icon-').html('<img src="images/feeling5.png">');
+				$('#my-weather-').text('소나기');
+			});
+			$('.f-img6').click(function(){
+				$('#my-icon-').html('<img src="images/feeling6.png">');
+				$('#my-weather-').text('천둥번개');
+			});
+			$('.f-img7').click(function(){
+				$('#my-icon-').html('<img src="images/feeling7.png">');
+				$('#my-weather-').text('눈');
+			});
+			$('.f-img8').click(function(){
+				$('#my-icon-').html('<img src="images/feeling8.png">');
+				$('#my-weather-').text('맑은 새벽');
+			});
+
+			//일기 적으면 기록에 넘어가기
+			$('.button2-').click(function(){
+				let diary = $('.diary-').val();
+				$('#my-diary-').text(diary);
+			});
+
+			//달력 바 눌렀을 때
+			$('.button2-').click(function(){
+				$('.container2-').css('display', 'none');
+				$('.button-').css('display', 'none');
+				$('.today-').hide();
+				$('.calendar-').toggleClass('height');
+				$('.bar-').toggleClass('position');
+				$('.ui-datepicker-calendar').toggle();
+				$('#datepicker2-').toggle();
+				$('#today-record-').show();
+				$('ui-datepicker-today').css('background-color', 'red');
+				$('.bluecolor-').hide();
+			});
+
+			//바 누르면 datepicker2 나오게 하기
+			$('.date4-').click(function(){
+				$(this).addClass('colorbutton');
+				$(this).removeClass('disabled');
+				$('.date4-').not($(this)).addClass('disabled');
+			});
+
+			//datepicker2에서 수요일 눌렀을 때
+			$('.colorweatherin-').click(function(){
+				$('.today-').hide();
+				$('.button-').hide();
+				$('.container-').append($('#today-record2-'));
+				$('#today-record-').hide();
+				$('#today-record2-').show();
+			});
+
+			$('.date4-:not(.colorweatherin-)').click(function(){
+				$('.today-').show();
+				$('.button-').show();
+				$('#today-record-').hide();
+				$('#today-record2-').hide();
+			});
+
+			//datepicker2에서 금요일 눌렀을 때
+			$('.date5-').click(function(){
+				$('.today-').hide();
+				$('.button-').hide();
+				$('.container-').append($('#today-record-'));
+				$('#today-record2-').hide();
+				$('#today-record-').show();
+			});
+
+			//수요일 숫자 색 바꾸기
+			//$('.ui-state-default:contains(3)').css('color', 'white');
+			//$('.ui-state-default:contains(13)').css('color', '#666666');
+			//$('.ui-state-default:contains(23)').css('color', '#666666');
+			//$('.ui-state-default:contains(30)').css('color', '#666666');
+            //$('.ui-state-default:contains(31)').css('color', '#666666');
+            //$('.ui-state-disabled.ui-state-default:contains(3)').css//('color', '#666666');
+
+
+			//기록 완료했을 때 달력에 표시하기
+			$('.so-hot-').click(function(){
+				$('.ui-state-active').css('background-color', '#D44A4C');
+				$('.ui-state-active').css('border-color', '#B73E40');
+				$('.ui-state-active').css('color', 'white');
+				$('.colorweather2-').css('background-color', '#D44A4C');
+				$('.colorweather2-').css('border-color', '#B73E40');
+			});
+			$('.hot-').click(function(){
+				$('.ui-state-active').css('background-color', '#FFAC80');
+				$('.ui-state-active').css('border-color', '#EEA178');
+				$('.ui-state-active').css('color', 'white');
+				$('.colorweather2-').css('background-color', '#FFAC80');
+				$('.colorweather2-').css('border-color', '#EEA178');
+			});
+			$('.suitable-').click(function(){
+				$('.ui-state-active').css('background-color', '#70CBB8');
+				$('.ui-state-active').css('border-color', '#64C0AD');
+				$('.ui-state-active').css('color', 'white');
+				$('.colorweather2-').css('background-color', '#70CBB8');
+				$('.colorweather2-').css('border-color', '#64C0AD');
+			});
+			$('.cold-').click(function(){
+				$('.ui-state-active').css('background-color', '#48A0F8');
+				$('.ui-state-active').css('border-color', '#4294E7');
+				$('.ui-state-active').css('color', 'white');
+				$('.colorweather2-').css('background-color', '#48A0F8');
+				$('.colorweather2-').css('border-color', '#4294E7');
+			});
+			$('.so-cold-').click(function(){
+				$('.ui-state-active').css('background-color', '#9D80FF');
+				$('.ui-state-active').css('border-color', '#8D73E3');
+				$('.ui-state-active').css('color', 'white');
+				$('.colorweather2-').css('background-color', '#9D80FF');
+				$('.colorweather2-').css('border-color', '#8D73E3');
+			});
+			
+		});
+    </script>
+</body>
+</html>

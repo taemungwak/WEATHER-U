@@ -1,0 +1,635 @@
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoB.ttf');
+    font-family: "Apple_Neo_Bold";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoEB.ttf');
+    font-family: "Apple_Neo_ExtraBold";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoH.ttf');
+    font-family: "Apple_Neo_Heavy";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoL.ttf');
+    font-family: "Apple_Neo_Light";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoM.ttf');
+    font-family: "Apple_Neo_Medium";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoR.ttf');
+    font-family: "Apple_Neo_Regular";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoSB.ttf');
+    font-family: "Apple_Neo_SemiBold";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoT.ttf');
+    font-family: "Apple_Neo_Thin";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoUL.ttf');
+    font-family: "Apple_Neo_UltraLight";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.container{
+    width: 375px;
+    height: 812px;
+    border: 1px solid #eaeaea;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    position: relative;
+    z-index: 2;
+}
+
+.phone{
+    position: relative;
+    top: 0;
+    z-index: -2;
+    width: 400px;
+}
+
+.main_page{
+    margin: 0 31px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ment{
+    font-family: "Apple_Neo_Regular";
+    color: white;
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 400px;
+}
+
+.click_ment{
+    font-family: "Apple_Neo_Regular";
+    color: white;
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 95px;
+}
+
+.header{
+    display: flex;
+    margin-top: 65px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time3{
+    font-family: "Apple_Neo_Medium";
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.navi{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+#icon-weather{
+    margin-bottom: 103px;
+
+    animation: animation 3s infinite ease;
+}
+
+@keyframes animation{
+    0%{
+        position: absolute;
+        top: 275px;
+    }
+    50%{
+        position: absolute;
+        top: 285px;
+    }
+    100%{
+        position: absolute;
+        top: 275px;
+    }
+}
+
+.question{
+    position: absolute;
+    left: 142px;
+    top: 520px;
+
+    display: none;
+}
+
+.user_bar{
+    width: 18px;
+    border: 1px solid #E1E1E1;
+    margin-bottom: 6px;
+}
+
+.bubble{
+    position: absolute;
+    left: 128px;
+    top: 508px;
+
+    display: none;
+}
+
+.user_question{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    color: #696969;
+    margin-bottom: 8px;
+}
+
+.expression{
+    width: 157px;
+    height: 64px;
+    font-family: AppleSDGothicNeoR00;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 16px;
+    color: #939393;
+}
+
+#main_city{
+    font-family: "Apple_Neo_Regular";
+    font-weight: medium;
+    font-size: 32px;
+    color: white;
+}
+
+.temperature{
+    display: flex;
+    align-items: center;
+    margin-top: -4px;
+    justify-content: space-between;
+}
+
+#temperature{
+    display: flex;
+    align-items: center;
+}
+
+.main_temp{
+    display: flex;
+}
+
+#temp{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 96px;
+    color: white;
+    font-weight: 400;
+    line-height: 96px;
+}
+
+.celsius{
+    font-family: "Apple_Neo_UltraLight";
+    font-size: 96px;
+    color: white;
+    margin-right: 32px;
+    margin-top: 10px;
+    margin-left: 2px;
+    line-height: 96px;
+}
+
+.user_weather{
+    width: 150px;
+    height: 72px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-top: 13px;
+    padding-left: 14px;
+}
+
+.flex2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.user{
+    font-family: "Apple_Neo_Regular";
+    font-size: 12px;
+    color: #A5A5A5;
+    padding-top: 1px;
+}
+
+.weather_log{
+    font-family: "Apple_Neo_Bold";
+    font-size: 20px;
+    color: #9D80FF;
+}
+
+/* 날씨 더보기 */
+.see_more{
+    width: 375px;
+    height: 741px;
+    background-color: white;
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;   
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    position: absolute;
+    top: 740px;
+
+    transition: all 0.3s ease;
+}
+
+.see_more::-webkit-scrollbar {
+    display: none;
+}
+
+.more{
+    margin-top: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather_more{
+    font-family: AppleSDGothicNeoL00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(130, 130, 130, 0.8);
+}
+
+.more-position{
+    top: 71px;
+}
+
+
+
+
+
+
+/* weather details styles */
+.container2{
+    width: 375px;
+    display: none;
+}
+
+.flex3{
+    display: flex;
+    margin-left: 34px;
+    overflow-x: auto;
+}
+
+/* today */
+.rightnow{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #353C49;
+    margin-bottom: 17px;
+}
+
+/* 시간대별 날씨 */
+.hour{
+    border-bottom: 1px solid #EFF2F4;
+    padding-right: 24px;
+}
+
+.time_weather{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #353C49;
+    margin-top: 54px;
+    margin-left: 24px;
+    margin-bottom: 26px;
+}
+
+
+#forecast{
+    display: flex;
+    margin-bottom: 64px;
+    overflow: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#forecast::-webkit-scrollbar {
+    display: none;
+}
+
+.forecast{
+    margin-right: 20px;
+}
+
+.date{
+    width: 28px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #979BA7;
+    margin-bottom: 15px;
+}
+
+.temp{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #353C49;
+    margin-top: 17px;
+}
+
+/* 주간 날씨 */
+.week{
+    border-bottom: 1px solid #EFF2F4;
+    padding-right: 24px;
+}
+
+.week_weather{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #353C49;
+    margin-top: 54px;
+    margin-left: 24px;
+    margin-bottom: 26px;
+}
+
+#forecast2{
+    height: 129px;
+    display: flex;
+    margin-bottom: 64px;
+    margin-left: 34px;
+    overflow: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#forecast2::-webkit-scrollbar {
+    display: none;
+}
+
+.forecast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date2{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color:#979BA7;
+    margin-bottom: 15px;
+}
+
+.temp_max{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #D44A4C;
+    margin-top: 15px;
+}
+
+.bar{
+    width: 2px;
+    height: 15px;
+    background-color: #C4C4C4;
+    border-radius: 1px;
+}
+
+.temp_min{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5698CB;
+}
+
+/* 상세날씨 */
+.detailed{
+    border-bottom: 1px solid #EFF2F4;
+    padding-right: 24px;
+}
+
+.detailed_weather{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #353C49;
+    margin-top: 54px;
+    margin-left: 24px;
+    margin-bottom: 26px;
+}
+
+.detailed_weather_form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    margin-left: 34px;
+}
+
+.detailed_weather_form1{
+    flex: 0 0 auto
+}
+
+.weather_title{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #353C49;
+}
+
+#feels_like{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #E3A339;
+    margin-bottom: 28px;
+    width: 162px;
+}
+
+#wind_speed{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #73C1E0;
+}
+
+#huminity{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #73C1E0;
+    width: 162px;
+}
+
+#rain{
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7AC573;
+}
+
+/* 일출일몰 */
+.sunriseset{
+    padding-bottom: 64px;
+    border-bottom: 1px solid #EFF2F4;
+    padding-right: 24px;
+}
+
+.sunriseset_title{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #353C49;
+    margin-top: 54px;
+    margin-left: 24px;
+    margin-bottom: 26px;
+}
+
+.circle{
+    width: 248px;
+    height: 124px;
+    border: 4px solid #EFF2F4;
+    border-bottom: none;
+    border-radius: 124px 124px 0 0;
+    margin-left: 58px;
+
+    position: relative;
+}
+
+.sunmove{
+    width: 248px;
+    height: 124px;
+    border: 4px solid #F9B089;
+    border-bottom: none;
+    border-radius: 124px 124px 0 0;
+
+    position: absolute;
+    top: -4px;
+    left: -4px;
+
+    animation: sun_animation 12s;
+
+    display: none;
+}
+
+@keyframes sun_animation {
+    0%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+.sun{
+    display: flex;
+    margin-left: 34px;
+}
+
+
+#sunrise{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #353C49;
+    margin-top: 6px;
+}
+
+#sunset{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #353C49;
+    margin-top: 6px;
+}
+
+
+
+/* 날씨정보 */
+.sourcediv{
+    display: flex;
+    justify-content: center;
+}
+
+.source{
+    display: block;
+    font-family: AppleSDGothicNeoM00;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #53535B;
+    text-decoration: none;
+    margin: 18px 0 20px 0;
+}
+
+
+.before-{
+    width: 4px;
+    flex-grow: 1;
+}
+
+.after-{
+    width: 100%;
+    flex: 1;
+}

@@ -1,0 +1,901 @@
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoB.ttf');
+    font-family: "Apple_Neo_Bold";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoEB.ttf');
+    font-family: "Apple_Neo_ExtraBold";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoH.ttf');
+    font-family: "Apple_Neo_Heavy";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoL.ttf');
+    font-family: "Apple_Neo_Light";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoM.ttf');
+    font-family: "Apple_Neo_Medium";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoR.ttf');
+    font-family: "Apple_Neo_Regular";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoSB.ttf');
+    font-family: "Apple_Neo_SemiBold";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoT.ttf');
+    font-family: "Apple_Neo_Thin";
+}
+
+@font-face{
+    src: url('../fonts/AppleSDGothicNeoUL.ttf');
+    font-family: "Apple_Neo_UltraLight";
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-{
+    width: 375px;
+    height: 812px;
+	background-color: white;
+
+	position: relative;
+	transform: translateX(-100%);
+	left: 100%;
+	display: none;
+}
+
+header{
+	display: flex;
+}
+
+.naviicon-{
+	padding-top: 59px;
+	margin-right: 116px;
+	margin-left: 4px;
+}
+
+.naviicon-:focus{
+	outline: none;
+}
+
+.calendar-{
+	width: 375px;
+	height: 572px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+	border-radius: 0px 0px 36px 36px;
+	overflow: hidden;
+
+	transition: all 0.5s ease;
+}
+
+.titlerecord-{
+	font-family: AppleSDGothicNeoB00;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: normal;
+	text-align: center;
+	color: #353C49;
+
+	padding-top: 66px;
+	margin: 0px;
+}
+
+.bar-{
+	display: block;
+	width: 57px;
+	height: 5px;
+	background-color: #F9B089;	
+	border-radius: 2.5px;
+	margin: 0 auto 12px auto;
+	
+	transition: all 0.5s ease;
+}
+
+.height{
+	height: 278px;
+}
+
+.position{
+	position: absolute;
+	top: 261px;
+	left: 159px;
+	margin-top: 0;
+}
+
+.bar-:focus {
+    outline: none;
+}
+
+h2{
+	font-family: AppleSDGothicNeoR00;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 21px;
+	color: #afafaf;
+	text-align: center;
+
+	margin-top: 64px;
+	margin-bottom: 22px;
+}
+
+.center-{
+	display: flex;
+	justify-content: center;
+}
+
+.button-{
+	padding: 9px 18px;
+	background-color:#f1f1f1;
+	border-radius: 24px;
+
+	font-family: AppleSDGothicNeoM00;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: #353C49;
+	text-decoration: none;
+
+}
+
+.button-:active{
+	border: none;
+}
+
+.record-{
+	font-family: AppleSDGothicNeoM00;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: #353C49;
+	text-decoration: none;
+
+}
+
+/* DatePicker Container */
+.ui-datepicker {
+	width: 307px;
+	height: auto;
+	margin: 4px auto 0;
+}
+.ui-datepicker a {
+	text-decoration: none;
+}
+
+/* DatePicker Table */
+.ui-datepicker table {
+	width: 100%;
+}
+.ui-datepicker-header {
+	margin-bottom: 27px;
+	font-family: AppleSDGothicNeoB00;
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 36px;
+
+	color: #353C49;
+}
+
+.ui-datepicker-title {
+	text-align: center;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 600%;
+	overflow: hidden;
+}
+.ui-datepicker-prev {
+	background-image: url('https://i.postimg.cc/3JVRc12M/u-angle-left-b.png');
+	background-repeat: no-repeat;
+	float: left;
+	background-position: center 8px;
+}
+.ui-datepicker-next {
+	background-image: url('https://i.postimg.cc/65kW03Nt/angle-right-b.png');
+	background-repeat: no-repeat;
+	float: right;
+	background-position: center 8px;
+}
+/* .ui-datepicker thead {} */
+.ui-datepicker th {
+	font-family: "Apple_Neo_Light";
+	font-size: 12px;
+	padding: 5px 0;
+	color: #3c3c3c;
+}
+
+th.ui-datepicker-week-end{
+	color: #D44A4C;
+}
+
+.ui-datepicker tbody td {
+	padding-top: 4px;
+	border: none;
+	vertical-align: top;
+}
+
+.ui-datepicker tbody tr {
+	border-bottom: 1px solid #EFF2F4;
+	height: 70px;
+}
+.ui-datepicker tbody tr:last-child {
+	border-bottom: 0px;
+}
+
+.ui-datepicker td{
+	text-align: center;
+}
+
+td.ui-datepicker-week-end .ui-state-default{
+	color: #D44A4C;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	display: inline-block;
+	font-weight: bold;
+	width: 16px;
+	height: 16px;
+	line-height: 15px;
+	color: #666666;
+	font-family: AppleSDGothicNeoB00;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.ui-datepicker-calendar .ui-state-default{
+	text-align: center;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+	background: #EFF2F4;
+	border: 1px solid #e3e6e9;
+	border-radius: 70%;
+	position: relative;
+	margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+	color: rgba(60, 60, 60, 0.4);
+}
+
+
+td.ui-datepicker-week-end.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled .ui-state-default{
+	color: rgba(212, 74, 76, 0.4);
+}
+
+.bluecolor-{
+	width: 16px;
+	height: 16px;
+	background: #48A0F8;
+    border: 1px solid #4294E7;
+    border-radius: 70%;
+    margin: -1px;
+
+	position: absolute;
+	top: 206px;
+	left: 180px;
+	z-index: -1;
+}
+
+
+/* Weather record */
+.container2-{
+	background-color: white;
+    width: 375px;
+    height: 812px;;
+	display: none;
+	overflow: hidden;
+
+	position: absolute;
+	top: 0;
+	overflow-y: auto;
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container2-::-webkit-scrollbar {
+    display: none;
+}
+
+.x-{
+    margin-left: 24px;
+    margin-top: 59px;
+    margin-bottom: 25px;
+}
+
+.x-:focus {
+    outline: none;
+}
+
+.content-{
+    margin-left: 33px;
+    margin-right: 33px;
+}
+
+.conA-, .conB-, .conC-, .conD-{
+    margin-bottom: 50px;
+}
+
+.title1-{
+    font-family: AppleSDGothicNeoM00;
+    font-weight: normal;
+    font-size: 24px;
+	text-align: left;
+    line-height: 34px;
+    color: #3C3C3C;
+    margin-bottom: 30px;
+	padding-top: 0px;
+}
+
+.color-{
+    font-family: AppleSDGothicNeoSB00;
+    color: #F9B089;
+}
+
+.title-{
+    font-family: AppleSDGothicNeoM00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #3C3C3C;
+	margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+
+.feeling-{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.plus-{
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #DADADA;
+    border-radius: 38px;
+    text-align: center;
+}
+
+.plus:focus{
+	outline: none;
+}
+
+.so-hot-{
+    padding: 8px 16px;
+    background: rgba(217, 88, 89, 0.3);
+    border-radius: 24px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #D95859;
+    text-decoration: none;
+}
+
+.so-hot-:focus{
+	outline: none;
+}
+
+.active1{
+	border: 1px solid rgba(217, 88, 89, 0.5);
+	outline: none;
+}
+
+.hot-{
+    padding: 8px 16px;
+    background: rgba(255, 172, 128, 0.3);
+    border-radius: 24px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFAC80;
+    text-decoration: none;
+}
+
+.hot-:focus{
+	outline: none;
+}
+
+.active2{
+	border: 1px solid rgba(255, 172, 128, 0.5);
+	outline: none;
+}
+
+.suitable-{
+    padding: 8px 16px;
+    background: rgba(106, 189, 172, 0.3);
+    border-radius: 24px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6ABDAC;
+    text-decoration: none;
+}
+
+.suitable-:focus{
+	outline: none;
+}
+
+.active3{
+	border: 1px solid rgba(106, 189, 172, 0.5);
+	outline: none;
+}
+
+.cold-{
+    padding: 8px 16px;
+    background: rgba(72, 160, 248, 0.3);
+    border-radius: 24px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #48A0F8;
+    text-decoration: none;
+}
+
+.cold-:focus{
+	outline: none;
+}
+
+.active4{
+	border: 1px solid rgba(72, 160, 248, 0.5);
+	outline: none;
+}
+
+.so-cold-{
+    padding: 8px 16px;
+    background: rgba(157, 128, 255, 0.3);
+    border-radius: 24px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #9D80FF;
+    text-decoration: none;
+}
+
+.so-cold-:focus{
+	outline: none;
+}
+
+.active5{
+	border: 1px solid rgba(157, 128, 255, 0.5);
+	outline: none;
+}
+
+textarea{
+	font-family: Apple_Neo_Light;
+	width: 309px;
+    height: 130px;
+    border: 1px solid #EFF2F4;
+    border-radius: 16px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    resize: none;
+}
+
+textarea[type=text]:focus {
+    outline: 1px solid #FFAC80;
+}
+
+textarea::placeholder{
+    font-family: Apple_Neo_Light;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #AAAAAA;
+    word-break: break-all;
+}
+
+.feeling-img{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.f-img{
+	position: relative;
+}
+
+.white{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.f-img:focus{
+	outline: none;
+}
+
+.small-title-{
+    display: flex;
+    gap: 6px;
+}
+
+.options-{
+    width: 32px;
+    height: 17px;
+    background: #F1F1F1;
+    border-radius: 8.5px;
+    font-family: AppleSDGothicNeoR00;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 12px;
+    color: #939393;
+    text-decoration: none;
+    text-align: center;
+    padding: 3px 7px 3px 7px;
+    margin-top: 1px;
+}
+
+.button2-{
+	text-decoration: none;
+}
+
+.complete-{
+    width: 309px;
+    height: 55px;
+    padding: 16px 140px 17px 141px;
+	margin-top: 0px;
+    margin-bottom: 16px;
+    background: #F9B089;
+    border-radius: 27.5px;
+    font-family: AppleSDGothicNeoSB00;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.space{
+	width: 100%;
+	height: 16px;
+}
+/* Weather record */
+
+
+
+/* today-record */
+#today-record-{
+	width: 285px;
+	height: 227px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 32px;
+	display: none;
+}
+
+#today-record2-{
+	width: 285px;
+	height: 227px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 32px;
+	display: none;
+}
+
+.record-header-{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-{
+	display: flex;
+	align-items: center;
+}
+
+#time3-{
+	font-family: AppleSDGothicNeoR00;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: -0.03em;
+	color: #545455;
+	margin-right: 4px;
+}
+
+#time4-{
+	font-family: AppleSDGothicNeoR00;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: -0.03em;
+	color: #545455;
+	margin-right: 4px;
+}
+
+
+#city3-{
+	font-family: AppleSDGothicNeoSB00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #353C49;
+}
+
+.more-icon-:focus{
+	outline: none;
+}
+
+.myadvice-{
+	font-family: AppleSDGothicNeoSB00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #353C49;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+
+.temparature3-{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 26px;
+}
+
+.tempminmax-{
+	display: flex;
+	align-items: center;
+}
+
+#temp_max3-{
+	font-family: AppleSDGothicNeoL00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 46px;
+	color: #D44A4C;
+	margin-right: 6px;
+}
+
+.slash-{
+	font-family: AppleSDGothicNeoL00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 31px;
+	color: #6B6B6B;
+	margin: 0px;
+}
+
+#temp_min3-{
+	font-family: AppleSDGothicNeoL00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 46px;
+	color: #5698CB;
+	margin-left: 6px;
+}
+
+#todayweather-{
+	margin-bottom: 4px;
+}
+
+.line3-{
+	border: 1px solid #EFF2F4;
+}
+
+.my-diary-{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+#my-weather-{
+	font-family: AppleSDGothicNeoSB00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #353C49;
+	margin-left: 8px;
+}
+
+#my-diary-{
+	font-family: AppleSDGothicNeoR00;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	color: #353C49;
+	margin-top: 8px;
+}
+/* today-record */
+
+/* datepicker2 */
+#datepicker2-{
+	width: 305px;
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+
+	position: absolute;
+	top: 156.5px;
+	left: 35px;
+}
+
+.calendar2-{
+	width: 305px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3px;
+
+	position: relative;
+}
+
+.date4-:not(:first-child){
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Apple_Neo_Light";
+	text-decoration: none;
+
+	width: 41px;
+	border-radius: 20.5px;
+	padding: 8px 12px;
+}
+
+.date4-:first-child{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Apple_Neo_Light";
+	text-decoration: none;
+
+	width: 41px;
+	border-radius: 20.5px;
+	padding: 8px 12px;
+}
+
+.date5-{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Apple_Neo_Light";
+	text-decoration: none;
+
+	width: 41px;
+	border-radius: 20.5px;
+	padding: 8px 12px;
+}
+
+.colorbutton{
+	background-color: #F1F1F1;
+	border: 1px solid #EAEAEA;
+}
+
+.disabled{
+	background-color: white;
+	border: 1px solid white;
+}
+
+.todayfriday-{
+	background: #F9B089;
+	border: 1px solid #ECAB88;
+	border-radius: 20.5px;
+	padding: 8px 12px;
+}
+
+.weekdays-{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 0;
+	color: #3c3c3c;
+}
+
+.todayweekdays-{
+	font-family: "Apple_Neo_SemiBold";
+	font-size: 12px;
+	padding: 5px 0;
+	color: white;
+}
+
+.weekend-{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 0;
+	color:#D44A4C;
+}
+
+.number-{
+	font-family: AppleSDGothicNeoB00;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #3C3C3C;
+}
+
+.todaynumber-{
+	font-family: "Apple_Neo_Medium";
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: white;
+}
+
+.numberwhite-{
+	font-family: AppleSDGothicNeoB00;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(212, 74, 76, 0.4);
+}
+
+.numberweekend-{
+	font-family: AppleSDGothicNeoB00;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #D44A4C;
+}
+
+.date4-:focus{
+	outline: none;
+}
+
+.date5-:focus{
+	outline: none;
+}
+
+.colorweather1-{
+	width: 15px;
+	height: 15px;
+	background: #48A0F8;
+	border-radius: 70%;
+
+	position: absolute;
+	top: 77px;
+	left: 145px;
+}
+
+.colorweather2-{
+	width: 15px;
+	height: 15px;
+	background: #48A0F8;
+	border-radius: 100%;
+
+	position: absolute;
+	top: 77px;
+	left: 234px;
+}
